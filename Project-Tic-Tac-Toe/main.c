@@ -56,10 +56,6 @@ int main()
                 break;
             }
         }
-        botMoove(board);
-        playercheck ++;
-
-
         if(winCondition(board))
         {
             if(playercheck % 2 == 1)
@@ -73,7 +69,21 @@ int main()
                 break;
             }
         }
-
+        botMoove(board);
+        playercheck ++;
+        if(winCondition(board))
+        {
+            if(playercheck % 2 == 1)
+            {
+                printf("You win !!\n");
+                break;
+            }
+            else
+            {
+                printf("You lose !!\n");
+                break;
+            }
+        }
 
     }
     return 0;
